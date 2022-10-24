@@ -90,6 +90,9 @@ public class Methods {
 	public static int arraySum(int[] values) {
 		int sum = 0;
 		// FIXME: Compute the sum of the values in an array
+		for (int i = 0; i < values.length; i++) {
+			sum += values[i];
+		}
 		
 		return sum;
 	}
@@ -102,15 +105,27 @@ public class Methods {
 	 * @return and array of size that's filled with value
 	 */
 	public static int[] filledArray(int length, int value) {
-		int[] values = null; // FIXME: Create an array of the appropriate size
+		int[] values = new int[length]; // FIXME: Create an array of the appropriate size
 		// TODO: Finish this method
-
+		for(int i = 0; i < length; i++) {
+			values[i] = value;
+		}
 		
 
 		return values;
 	}
 
 	// TODO: Create an arrayMean method which accepts an int array of values parameter.
+	/**
+	 * This method computes and returns the average of the given array
+	 * @param array with values to be averaged
+	 * @return the average of the values in the array
+	 */
+	public static double arrayMean(int[] array) {
+		int sum = arraySum(array);
+		return((double) sum) / array.length;
+	}
+	
 	// TODO: Create a JavaDoc comment for the arrayMean method.
 
 	
